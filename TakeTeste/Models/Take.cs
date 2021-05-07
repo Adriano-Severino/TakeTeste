@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using TakeTeste.Service;
 
 namespace TakeTeste.Models
 {
-    public class Take
-    {
-        // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
+
+        
+      
         public class Owner
         {
             public string login { get; set; }
@@ -39,7 +41,7 @@ namespace TakeTeste.Models
             public string node_id { get; set; }
         }
 
-        public class Root
+        public class Take
         {
             public int id { get; set; }
             public string node_id { get; set; }
@@ -117,5 +119,5 @@ namespace TakeTeste.Models
         }
 
 
-    }
+ 
 }
