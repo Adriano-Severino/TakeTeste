@@ -10,7 +10,7 @@ namespace TakeTeste.Service
 {
     public class ServiceRepository : Service
     {
-        public  List<Take> Get()
+        public  List<Take> GetAll()
         {
             List<Take> myDeserializedClass = new List<Take>();
             try
