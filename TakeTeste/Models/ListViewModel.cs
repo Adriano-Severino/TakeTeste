@@ -6,12 +6,6 @@ namespace TakeTeste.Models
     public class ListViewModel
     {
         public int TakeId { get; set; }
-        public List<TakeList> TakeLists { get; set; }
-
-    }
-
-    public class TakeList
-    {
         public int id { get; set; }
         public string name { get; set; }
         public DateTime created_at { get; set; }
