@@ -10,13 +10,13 @@ namespace TakeTeste.Service
 {
     public class ServiceRepository : Service
     {
-        public  List<Take> GetAll()
+        public List<Take> GetAll()
         {
             List<Take> myDeserializedClass = new List<Take>();
             try
             {
                 var client = new RestClient(BaseApiUrl);
-                client.Authenticator = new HttpBasicAuthenticator(UserName , PassWord);
+                client.Authenticator = new HttpBasicAuthenticator(UserName, PassWord);
 
                 var request = new RestRequest("", DataFormat.Json);
 
@@ -24,7 +24,7 @@ namespace TakeTeste.Service
                 if (response.StatusCode == HttpStatusCode.OK)
                 {
                     myDeserializedClass = JsonConvert.DeserializeObject<List<Take>>(response.Content);
-                   
+
                     return myDeserializedClass;
                 }
             }
@@ -32,11 +32,11 @@ namespace TakeTeste.Service
             {
                 e.Message.ToString();
             }
-         
+
 
             return myDeserializedClass;
 
         }
-     
+
     }
 }
